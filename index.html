@@ -1,113 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>GreenScape Landscaping | Professional Lawn Care</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>GreenScape Landscaping</title>
 
-  <meta name="description" content="Professional landscaping services including lawn care, design, and maintenance. Get a free quote today.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./style.css">
-</head>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
 
-<body>
+body {
+  background: #f6f8f5;
+  color: #1f2a1f;
+}
 
-<!-- NAV -->
-<nav>
-  <div><strong>GreenScape</strong></div>
-
-  <div>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="work.html">Work</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
-
-<!-- HERO (FIXED — lighter overlay + better text) -->
-<div style="
-  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-              url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
+/* HERO */
+.hero {
+  background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
   height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-">
+  position: relative;
+}
 
-  <div style="max-width: 700px; padding: 20px;">
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3); /* FIXED (was 0.55) */
+}
 
-    <h1 style="
-      font-size: 3rem;
-      margin-bottom: 12px;
-      text-shadow: 0 3px 15px rgba(0,0,0,0.6);
-    ">
-      A Better Looking Yard Without the Stress
-    </h1>
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  padding: 20px;
+}
 
-    <p style="
-      font-size: 1.2rem;
-      color: rgba(255,255,255,0.95);
-      text-shadow: 0 2px 10px rgba(0,0,0,0.6);
-    ">
-      Professional landscaping that keeps your home clean, modern, and maintained year-round.
-    </p>
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.5); /* ADDED */
+}
 
-    <br>
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5); /* ADDED */
+}
 
-    <a href="contact.html" class="btn">
-      Get a Free Quote
-    </a>
+.btn {
+  background: #3a7d44;
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
 
+/* SECTIONS */
+section {
+  padding: 70px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+/* SERVICES */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+/* ABOUT */
+.about {
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* CTA */
+.cta {
+  background: #3a7d44;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 10px;
+}
+
+.cta a {
+  margin-top: 15px;
+  display: inline-block;
+  background: white;
+  color: #3a7d44;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: gray;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>GreenScape Landscaping</h1>
+    <p>Affordable, reliable landscaping that makes your home stand out.</p>
+    <a href="#contact" class="btn">Get a Free Quote</a>
   </div>
-
 </div>
 
-<!-- INFO -->
-<div class="container">
-  <h2>Why Homeowners Choose Us</h2>
-
-  <div class="grid two">
+<!-- SERVICES -->
+<section>
+  <h2>Our Services</h2>
+  <div class="services">
 
     <div class="card">
-      <h3>Reliable Service</h3>
-      <p>We show up on time and deliver consistent results every visit.</p>
+      <h3>Lawn Care</h3>
+      <p>Weekly mowing, trimming, and cleanups to keep your yard perfect.</p>
     </div>
 
     <div class="card">
-      <h3>Affordable Pricing</h3>
-      <p>High-quality landscaping without overpriced contracts.</p>
+      <h3>Landscape Design</h3>
+      <p>Custom outdoor designs tailored to your home and style.</p>
     </div>
 
     <div class="card">
-      <h3>Clean Results</h3>
-      <p>We leave your yard looking sharp and professional.</p>
-    </div>
-
-    <div class="card">
-      <h3>Local Experts</h3>
-      <p>Trusted landscaping service for your community.</p>
+      <h3>Tree & Shrub Care</h3>
+      <p>Professional pruning and maintenance for healthy growth.</p>
     </div>
 
   </div>
-</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <h2>About Us</h2>
+  <p>
+    GreenScape Landscaping is a locally trusted service dedicated to transforming outdoor spaces into clean, beautiful environments. 
+    We focus on quality work, honest pricing, and dependable service every time.
+  </p>
+</section>
 
 <!-- CTA -->
-<div class="container" style="text-align:center;">
-  <h2>Ready for a Better Looking Yard?</h2>
-  <p>Get a fast, free quote in under 24 hours.</p>
+<section id="contact">
+  <div class="cta">
+    <h2>Ready to Upgrade Your Yard?</h2>
+    <p>Get a free estimate today — fast response within 24 hours.</p>
+    <a href="mailto:greenscape@example.com">Request Quote</a>
+  </div>
+</section>
 
-  <br>
-
-  <a class="btn" href="contact.html">Request Quote</a>
-</div>
-
+<!-- FOOTER -->
 <footer>
-  © 2026 GreenScape Landscaping
+  © 2026 GreenScape Landscaping. All rights reserved.
 </footer>
-
-<script src="./script.js"></script>
 
 </body>
 </html>
